@@ -54,12 +54,35 @@ def save_upload(file_storage) -> str:
 
 
 def get_dataset(dataset_id):
-    """Return the stored metadata dict for a dataset, or None."""
-    return DATASETS.get(dataset_id)
+    """Return the stored metadata dict for a dataset, or reload from disk, or None."""
+    if not dataset_id:
+        return None
+    if dataset_id in DATASETS:
+        return DATASETS[dataset_id]
+
+    if os.path.isdir(UPLOAD_DIR):
+        for fname in os.listdir(UPLOAD_DIR):
+            if fname.startswith(f"{dataset_id}_") and fname.lower().endswith(".csv"):
+                path = os.path.join(UPLOAD_DIR, fname)
+                try:
+                    df = pd.read_csv(path)
+                    original_name = fname[len(dataset_id) + 1:]
+                    DATASETS[dataset_id] = {"df": df, "name": original_name, "path": path}
+                    return DATASETS[dataset_id]
+                except Exception:
+                    pass
+    return None
 
 
 def list_datasets() -> list:
     """Lightweight listing for the 'previously uploaded' picker."""
+    if os.path.isdir(UPLOAD_DIR):
+        for fname in os.listdir(UPLOAD_DIR):
+            if "_" in fname and fname.lower().endswith(".csv"):
+                did = fname.split("_", 1)[0]
+                if did not in DATASETS:
+                    get_dataset(did)
+
     return [
         {
             "id": dataset_id,
