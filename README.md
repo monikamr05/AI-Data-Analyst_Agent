@@ -1,51 +1,48 @@
 # AI Data Analyst Agent
 
-A full-stack web app that lets you upload a CSV file, ask questions about the
-data in plain English, and get back AI-generated answers with explanations,
-tables, and interactive charts.
+A full-stack, AI-powered web application that lets you upload CSV datasets, ask questions in plain English, and receive instant answers accompanied by detailed explanations, structured data tables, interactive charts, and transparent pandas code.
 
-The AI (Google Gemini) writes real pandas code to answer each question; the
-backend validates that code against an allow-list and runs it against your
-uploaded data in a guarded sandbox.
+The AI (**Google Gemini**) writes real pandas code to answer each query; the backend statically validates the generated code in a secure AST sandbox and executes it against your data in isolated memory.
 
-## Features
+---
 
-- **CSV upload with instant profiling** — row/column counts, dtypes, nulls,
-  uniques, min/max/mean, duplicate detection, and a data preview.
-- **Natural-language Q&A** — ask things like *"Which region had the highest
-  revenue last year?"* and get a plain-language answer backed by real numbers.
-- **Tables and charts** — results render as scrollable tables and Recharts
-  visualizations (bar, line, area, pie, scatter) chosen automatically by the AI.
-- **Suggested questions** — starter questions generated from your dataset's
-  actual columns.
-- **Code transparency** — every answer can show the exact pandas code that
-  produced it (click "View the code used for this answer").
-- **Chat context** — follow-up questions take the recent conversation into
-  account.
+## 🚀 Features
 
-## Tech stack
+- **⚡ Instant CSV Profiling** — Row & column counts, data types, null counts, unique values, summary stats (min, max, mean), duplicate detection, and quick data preview.
+- **💬 Natural-Language Q&A** — Ask questions like *"Which product category generated the highest revenue?"* and get answers backed by real numbers.
+- **📊 Dynamic Charts & Tables** — Automatic visualization via Recharts (Bar, Line, Area, Pie, Scatter) tailored to the query results.
+- **💡 Smart Starter Questions** — Tailored questions generated dynamically from your dataset's columns and distributions.
+- **🔍 Code Transparency** — Inspect the exact pandas code written by the AI to verify and reproduce any result.
+- **🧠 Contextual Chat History** — Multi-turn conversation support that understands follow-up questions in context.
 
-| Layer     | Technology                          |
-| --------- | ----------------------------------- |
-| Frontend  | React 18 + Vite, Recharts           |
-| Backend   | Python 3, Flask, Flask-CORS         |
-| Data      | Pandas, NumPy                       |
-| AI        | Google Gemini API (`google-genai`)  |
-| Styling   | Hand-written responsive CSS         |
+---
 
-## Project structure
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | React 18, Vite, Recharts, Lucide Icons |
+| **Backend** | Python 3.12, Flask, Flask-CORS, Gunicorn |
+| **Data Processing** | Pandas, NumPy |
+| **AI Engine** | Google Gemini 2.5 Flash (`google-genai`) |
+| **Styling** | Modern responsive CSS with sleek dark/light aesthetics |
+
+---
+
+## 📁 Project Structure
 
 ```
 ai-data-analyst-agent/
 │
 ├── api/
-│   └── index.py            # Vercel serverless entry point (imports the Flask app)
+│   ├── index.py             # Serverless WSGI entry point (Vercel)
+│   └── requirements.txt     # Python dependencies for serverless deployment
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── components/     # FileUpload, ChatMessage, ChartView, DataTable, ...
-│   │   ├── pages/          # Dashboard, Upload, Workspace, History, Reports, Settings
-│   │   ├── services/       # api.js (fetch wrappers for the Flask API)
+│   │   ├── components/      # FileUpload, ChatMessage, ChartView, DataTable, etc.
+│   │   ├── pages/           # Dashboard, Upload, Workspace, History, Reports, Settings
+│   │   ├── services/        # api.js (API client)
 │   │   ├── App.jsx
 │   │   ├── main.jsx
 │   │   └── styles.css
@@ -53,150 +50,145 @@ ai-data-analyst-agent/
 │   └── index.html
 │
 ├── backend/
-│   ├── app.py              # Flask app factory + entry point
+│   ├── app.py               # Flask application factory and entry point
 │   ├── requirements.txt
-│   ├── .env.example        # copy to .env and add your Gemini key
-│   ├── routes/             # dataset_routes.py, analysis_routes.py
-│   ├── services/           # data_service, gemini_service, execution_service
-│   └── uploads/            # uploaded CSV files land here (locally)
+│   ├── .env.example         # Sample environment variables
+│   ├── routes/              # dataset_routes.py, analysis_routes.py
+│   ├── services/            # data_service, gemini_service, execution_service
+│   └── uploads/             # Local CSV storage
 │
 ├── sample_data/
-│   └── sales_data.csv      # 180-row demo dataset
-├── requirements.txt        # root copy for Vercel's Python build step
-├── vercel.json             # Vite build + /api rewrite config
-├── README.md
-└── .gitignore
+│   └── sales_data.csv       # Sample demo dataset
+├── requirements.txt         # Root Python requirements
+├── render.yaml              # Render blueprint deployment configuration
+├── vercel.json              # Vercel static build and routing configuration
+└── README.md
 ```
 
-## Setup
+---
 
-### 1. Backend
+## 💻 Local Setup & Development
+
+### 1. Backend Setup
 
 ```bash
 cd backend
 
+# Create virtual environment
 python -m venv .venv
-.venv\Scripts\activate          # Windows  (macOS/Linux: source .venv/bin/activate)
 
+# Activate virtual environment:
+# Windows:
+.venv\Scripts\activate
+# macOS / Linux:
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-Get a free Gemini API key from <https://aistudio.google.com/apikey>, then:
+Get a free Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey), then copy the environment template:
 
 ```bash
-copy .env.example .env          # macOS/Linux: cp .env.example .env
+# Windows
+copy .env.example .env
+# macOS / Linux
+cp .env.example .env
 ```
 
-Open `.env` and paste your key after `GEMINI_API_KEY=`. Then start the API:
+Open `.env` and set your key:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
 
+Start the Flask backend:
 ```bash
-python app.py                   # serves on http://localhost:5000
+python app.py
+# Runs on http://localhost:5000
 ```
 
-### 2. Frontend (second terminal)
+### 2. Frontend Setup (in a second terminal)
 
 ```bash
 cd frontend
 npm install
-npm run dev                     # serves on http://localhost:5173
+npm run dev
+# Runs on http://localhost:5173
 ```
 
-The Vite dev server proxies `/api/*` calls to Flask on port 5000, so just open
-<http://localhost:5173> in your browser.
+Open `http://localhost:5173` in your browser. The Vite development server automatically proxies `/api/*` requests to the Flask backend on port 5000.
 
-## Deploy to Vercel
+---
 
-The repo is wired for Vercel out of the box:
+## ☁️ Deployment Guides
 
-- `vercel.json` builds the frontend with `npm --prefix frontend run build`,
-  serves the static bundle from `frontend/dist`, and rewrites every `/api/*`
-  request to the Python function in `api/index.py`.
-- `api/index.py` imports the Flask app from `backend/` and exposes it as a
-  serverless WSGI function.
-- The root `requirements.txt` installs the Python dependencies.
+### Option 1: Deploy to Render (Recommended)
 
-Steps:
+Render runs a persistent full-stack Python service with Gunicorn:
 
-1. Push the project to GitHub and import the repo at
-   <https://vercel.com/new> (framework detection can be left on "Other").
-2. In **Project → Settings → Environment Variables**, add
-   `GEMINI_API_KEY` with your Gemini key (get one at
-   <https://aistudio.google.com/apikey>). Never commit the key — `.env` is
-   git-ignored.
-3. Deploy. Vercel installs Python deps, builds the frontend, and exposes
-   `https://<your-app>.vercel.app`.
+1. Push your repository to GitHub.
+2. Sign in to [Render Dashboard](https://dashboard.render.com) and click **New +** → **Web Service**.
+3. Select your GitHub repository.
+4. Configure the settings:
+   - **Environment / Runtime**: `Python`
+   - **Build Command**: 
+     ```bash
+     npm --prefix frontend install && npm --prefix frontend run build && pip install -r requirements.txt
+     ```
+   - **Start Command**: 
+     ```bash
+     gunicorn --chdir backend "app:create_app()" -b 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
+     ```
+5. Add **Environment Variables**:
+   - `PYTHON_VERSION` = `3.12.0`
+   - `GEMINI_API_KEY` = `your_gemini_api_key_here`
+6. Click **Deploy Web Service**.
 
-Notes on the serverless runtime:
+---
 
-- **Datasets live in function memory.** Each deployment or cold start clears
-  them, so after a deploy you re-upload your CSV (the UI prompts you to).
-- **Uploads are capped at 4 MB** on Vercel (its request-body limit is 4.5 MB);
-  locally the cap is 50 MB.
-- **Functions run at most 60 s** on the Hobby plan, so the backend auto-retries
-  a Gemini 429 only when Google says to wait ≤ 30 s; otherwise you get a
-  friendly "quota exhausted" message with a Retry button.
-- The demo login is a client-side gate, not real authentication.
+### Option 2: Deploy to Vercel
 
-## Usage
+1. Push your repository to GitHub.
+2. Go to [Vercel Dashboard](https://vercel.com/new) and import the repository.
+3. Keep **Framework Preset** as **Other** and **Root Directory** as `./`.
+4. Add the **Environment Variable**:
+   - `GEMINI_API_KEY` = `your_gemini_api_key_here`
+5. Click **Deploy**. Vercel will build the frontend and serve the Flask backend via serverless functions.
 
-1. Drag `sample_data/sales_data.csv` (or any of your own CSV files) onto the
-   upload page.
-2. Click a suggested question on the left, or type your own in the chat box.
-3. Read the explanation, and explore the table, chart, and generated code.
+---
 
-Example questions against the sample data:
+## 🔌 API Endpoints
 
-- *"Which region has the highest total revenue? Show a bar chart."*
-- *"How did monthly revenue develop over time?"*
-- *"What is the average profit per product category?"*
-- *"Which sales rep sold the most units?"*
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/api/upload` | Upload CSV dataset (`file` multipart form) |
+| `GET` | `/api/datasets` | List active datasets |
+| `GET` | `/api/datasets/<id>` | Fetch dataset schema, summary statistics, and profile |
+| `GET` | `/api/datasets/<id>/preview?n=20` | Get first N rows of the dataset |
+| `POST` | `/api/ask` | Submit a question `{dataset_id, question, history}` |
+| `GET` | `/api/suggested-questions?dataset_id=` | Retrieve starter questions for a dataset |
+| `GET` | `/api/health` | Health check & verify Gemini API configuration |
 
-## API endpoints
+---
 
-| Method | Path                                   | Description                                |
-| ------ | -------------------------------------- | ------------------------------------------ |
-| POST   | `/api/upload`                          | Upload a CSV (multipart field `file`)      |
-| GET    | `/api/datasets`                        | List datasets loaded in this session       |
-| GET    | `/api/datasets/<id>`                   | Dataset profile (schema + stats)           |
-| GET    | `/api/datasets/<id>/preview?n=20`      | First N rows                               |
-| POST   | `/api/ask`                             | `{dataset_id, question, history}` → answer |
-| GET    | `/api/suggested-questions?dataset_id=` | Tailored starter questions                 |
-| GET    | `/api/health`                          | Health check + whether the API key is set  |
+## 🔬 How the Analysis Pipeline Works
 
-Example `POST /api/ask` response:
+1. **Prompt Construction**: The backend prepares a structured context including dataset column schemas, summary statistics, data preview samples, recent chat history, and the user's question.
+2. **AI Code Generation**: Google Gemini produces a structured JSON response containing a natural language explanation, pandas code (assigning output to `result`), and an optional chart specification.
+3. **AST Sandbox Validation**: Python's `ast` module statically inspects the code to ensure it only imports permitted libraries (`pandas`, `numpy`), blocks access to dangerous built-ins, and rejects file/network I/O.
+4. **Execution & Format**: The validated code executes against a copy of the DataFrame. Results are serialized to JSON-safe tables and chart configurations.
+5. **Interactive UI Rendering**: React components display the natural language explanation, interactive Recharts visualization, scrollable data table, and reproducible Python code.
 
-```json
-{
-  "answer": "The North region leads with $12,340 in total revenue, ...",
-  "code": "result = df.groupby('region')['revenue'].sum().reset_index()",
-  "result": {
-    "type": "table",
-    "columns": ["region", "revenue"],
-    "rows": [{"region": "North", "revenue": 12340.0}],
-    "row_count": 4,
-    "truncated": false
-  },
-  "chart": { "type": "bar", "x": "region", "y": "revenue", "title": "Revenue by region" }
-}
-```
+---
 
-## How the analysis pipeline works
+## 🛡️ Security & Sandbox Design
 
-1. The backend builds a prompt containing the dataset schema, a sample of rows,
-   the recent chat history, and the user's question.
-2. Gemini is asked (in JSON mode) for `{explanation, code, chart}`.
-3. `execution_service` statically validates the code with Python's `ast` module
-   (pandas/numpy imports only, no dunder access, no dangerous builtins) and
-   executes it with a minimal builtin scope against a **copy** of the data.
-4. The `result` variable is converted to a JSON-safe table or scalar; the chart
-   spec is checked against the result's actual columns before being returned.
-5. The frontend renders the explanation, the table, and the Recharts chart.
+- **Static AST Filtering**: Prohibits `exec`, `eval`, `open`, `__import__`, `os`, `sys`, `subprocess`, and dunder attribute access.
+- **Restricted Execution Scope**: Code executes with minimal safe built-ins against in-memory copies of the data.
+- **Isolated Serverless/Container Environments**: Ensures safe execution during personal and team demo deployments.
 
-## Security note
+---
 
-Executing model-generated code is inherently powerful and risky. The sandbox
-(AST allow-list, restricted builtins, no file/network access) plus Vercel's
-serverless isolation makes this acceptable for a personal demo deployment,
-but the login page is a client-side gate — anyone with the URL can use the
-app. For a production or multi-user deployment, add real authentication,
-process isolation, stricter resource limits, and rate limiting first.
+## 📄 License
+
+MIT License. Feel free to use and customize for your data analysis projects!
