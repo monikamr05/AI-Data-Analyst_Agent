@@ -1,0 +1,181 @@
+order_id,order_date,category,product,region,sales_rep,units_sold,unit_price,discount,revenue,cost,profit
+1,2025-04-30,Electronics,USB-C Hub,South,J. Chen,5,49.99,0,249.95,183.14,66.81
+2,2026-07-18,Electronics,Noise-Cancelling Headset,West,A. Singh,1,129.99,0,129.99,79.17,50.82
+3,2026-06-07,Electronics,Noise-Cancelling Headset,South,P. Novak,21,129.99,0.1,2456.81,1810.59,646.22
+4,2026-04-10,Office Supplies,Notebook Set,South,P. Novak,14,12.99,0,181.86,113.67,68.19
+5,2025-08-14,Office Supplies,Notebook Set,North,S. O'Neil,4,12.99,0,51.96,40.47,11.49
+6,2025-10-03,Electronics,Webcam 1080p,North,S. O'Neil,3,69.99,0.1,188.97,132.1,56.87
+7,2026-01-11,Furniture,Ergonomic Desk Chair,North,P. Novak,8,249.99,0,1999.92,1631.95,367.97
+8,2025-09-01,Electronics,Webcam 1080p,East,S. O'Neil,21,69.99,0,1469.79,872.93,596.86
+9,2026-01-04,Furniture,Bookshelf,North,L. Weber,21,119.99,0,2519.79,1749.28,770.51
+10,2025-09-13,Furniture,Desk Lamp,West,M. Garcia,21,34.99,0.1,661.31,447.7,213.61
+11,2025-12-04,Electronics,Mechanical Keyboard,North,M. Garcia,13,89.99,0,1169.87,664.34,505.53
+12,2026-08-09,Office Supplies,Whiteboard 90x120,West,S. O'Neil,21,59.99,0.05,1196.8,741.48,455.32
+13,2025-05-28,Furniture,Filing Cabinet,East,P. Novak,19,89.99,0.05,1624.32,1354.87,269.45
+14,2026-02-18,Office Supplies,Whiteboard 90x120,South,L. Weber,16,59.99,0,959.84,723.78,236.06
+15,2025-04-28,Furniture,Standing Desk,West,L. Weber,3,399.99,0.05,1139.97,783.63,356.34
+16,2026-04-30,Office Supplies,Stapler Kit,North,P. Novak,24,15.99,0,383.76,281.7,102.06
+17,2026-07-09,Office Supplies,Marker Pack,North,M. Garcia,14,8.99,0,125.86,84.64,41.22
+18,2025-10-02,Furniture,Filing Cabinet,North,P. Novak,10,89.99,0.1,809.91,642.91,167.0
+19,2025-06-11,Office Supplies,Whiteboard 90x120,North,L. Weber,11,59.99,0.05,626.9,366.41,260.49
+20,2026-01-12,Office Supplies,Whiteboard 90x120,North,J. Chen,19,59.99,0,1139.81,653.26,486.55
+21,2026-05-18,Electronics,Noise-Cancelling Headset,South,J. Chen,22,129.99,0.05,2716.79,2303.98,412.81
+22,2025-06-24,Office Supplies,Stapler Kit,West,J. Chen,18,15.99,0,287.82,213.71,74.11
+23,2026-02-18,Office Supplies,Printer Paper Box,West,A. Singh,8,24.99,0,199.92,113.41,86.51
+24,2025-01-27,Furniture,Filing Cabinet,South,A. Singh,3,89.99,0,269.97,165.17,104.8
+25,2025-02-07,Office Supplies,Notebook Set,South,M. Garcia,22,12.99,0.05,271.49,173.71,97.78
+26,2025-05-21,Accessories,Monitor Arm,West,S. O'Neil,7,74.99,0,524.93,302.45,222.48
+27,2026-03-23,Office Supplies,Printer Paper Box,West,S. O'Neil,24,24.99,0,599.76,438.91,160.85
+28,2025-04-16,Electronics,Webcam 1080p,East,A. Singh,8,69.99,0,559.92,336.71,223.21
+29,2026-04-10,Furniture,Desk Lamp,South,M. Garcia,15,34.99,0,524.85,412.59,112.26
+30,2025-03-24,Accessories,Webcam Privacy Cover,North,A. Singh,21,5.99,0.1,113.21,97.58,15.63
+31,2025-04-11,Furniture,Standing Desk,West,S. O'Neil,16,399.99,0,6399.84,5013.99,1385.85
+32,2025-03-07,Furniture,Desk Lamp,North,S. O'Neil,9,34.99,0.05,299.16,197.45,101.71
+33,2026-07-29,Accessories,Monitor Arm,South,M. Garcia,7,74.99,0,524.93,370.8,154.13
+34,2026-07-15,Electronics,USB-C Hub,North,A. Singh,19,49.99,0.05,902.32,651.35,250.97
+35,2026-07-03,Furniture,Ergonomic Desk Chair,North,J. Chen,3,249.99,0.1,674.97,426.25,248.72
+36,2025-09-03,Accessories,Laptop Stand,South,L. Weber,20,39.99,0,799.8,573.64,226.16
+37,2026-03-11,Office Supplies,Marker Pack,South,P. Novak,23,8.99,0,206.77,127.05,79.72
+38,2026-02-15,Furniture,Bookshelf,West,M. Garcia,25,119.99,0,2999.75,1657.41,1342.34
+39,2026-08-05,Electronics,Wireless Mouse,South,L. Weber,9,29.99,0,269.91,216.46,53.45
+40,2025-03-17,Furniture,Bookshelf,East,J. Chen,15,119.99,0.1,1619.87,1331.81,288.06
+41,2026-07-01,Electronics,Noise-Cancelling Headset,East,P. Novak,4,129.99,0,519.96,323.11,196.85
+42,2025-04-25,Furniture,Bookshelf,East,L. Weber,7,119.99,0,839.93,508.13,331.8
+43,2025-10-03,Accessories,Cable Organizer,North,A. Singh,21,9.99,0.05,199.3,162.36,36.94
+44,2025-02-20,Electronics,USB-C Hub,South,P. Novak,9,49.99,0,449.91,337.49,112.42
+45,2026-07-24,Accessories,Webcam Privacy Cover,North,A. Singh,3,5.99,0,17.97,12.53,5.44
+46,2026-01-19,Furniture,Desk Lamp,South,A. Singh,10,34.99,0,349.9,277.37,72.53
+47,2025-02-15,Office Supplies,Whiteboard 90x120,South,P. Novak,4,59.99,0,239.96,182.52,57.44
+48,2026-02-26,Furniture,Standing Desk,South,J. Chen,14,399.99,0,5599.86,3351.11,2248.75
+49,2025-12-12,Accessories,Monitor Arm,East,J. Chen,23,74.99,0,1724.77,1126.77,598.0
+50,2025-02-14,Accessories,Monitor Arm,South,S. O'Neil,12,74.99,0,899.88,694.3,205.58
+51,2025-08-27,Furniture,Ergonomic Desk Chair,South,S. O'Neil,11,249.99,0,2749.89,2154.2,595.69
+52,2025-10-18,Office Supplies,Stapler Kit,West,P. Novak,18,15.99,0,287.82,231.29,56.53
+53,2025-05-04,Office Supplies,Whiteboard 90x120,East,A. Singh,4,59.99,0.1,215.96,160.13,55.83
+54,2025-11-23,Accessories,Webcam Privacy Cover,North,S. O'Neil,19,5.99,0,113.81,70.42,43.39
+55,2026-03-28,Electronics,Noise-Cancelling Headset,South,M. Garcia,14,129.99,0,1819.86,1467.16,352.7
+56,2025-12-10,Office Supplies,Notebook Set,East,L. Weber,10,12.99,0.05,123.41,82.89,40.52
+57,2025-11-04,Furniture,Standing Desk,West,P. Novak,13,399.99,0,5199.87,3724.09,1475.78
+58,2025-11-10,Accessories,Webcam Privacy Cover,North,M. Garcia,10,5.99,0,59.9,39.9,20.0
+59,2026-08-22,Office Supplies,Printer Paper Box,West,S. O'Neil,22,24.99,0,549.78,378.26,171.52
+60,2025-06-28,Electronics,USB-C Hub,East,A. Singh,25,49.99,0,1249.75,914.39,335.36
+61,2025-08-24,Furniture,Standing Desk,North,A. Singh,8,399.99,0.05,3039.92,2288.08,751.84
+62,2025-03-21,Accessories,Mouse Pad XL,South,P. Novak,23,19.99,0.05,436.78,314.24,122.54
+63,2025-09-12,Furniture,Ergonomic Desk Chair,North,S. O'Neil,8,249.99,0,1999.92,1534.16,465.76
+64,2026-06-20,Accessories,Laptop Stand,South,A. Singh,15,39.99,0,599.85,459.71,140.14
+65,2026-07-03,Office Supplies,Printer Paper Box,West,L. Weber,15,24.99,0,374.85,281.43,93.42
+66,2026-05-07,Accessories,Cable Organizer,South,P. Novak,9,9.99,0.1,80.92,61.21,19.71
+67,2025-09-07,Office Supplies,Printer Paper Box,North,P. Novak,10,24.99,0,249.9,155.78,94.12
+68,2025-11-29,Electronics,Mechanical Keyboard,South,J. Chen,13,89.99,0,1169.87,866.56,303.31
+69,2025-03-12,Accessories,Mouse Pad XL,East,L. Weber,15,19.99,0.05,284.86,169.96,114.9
+70,2026-03-12,Accessories,Webcam Privacy Cover,North,L. Weber,13,5.99,0.05,73.98,42.95,31.03
+71,2026-01-01,Office Supplies,Printer Paper Box,West,L. Weber,24,24.99,0.1,539.78,459.39,80.39
+72,2025-08-19,Accessories,Monitor Arm,East,S. O'Neil,16,74.99,0,1199.84,785.88,413.96
+73,2026-02-24,Furniture,Desk Lamp,South,L. Weber,18,34.99,0,629.82,500.63,129.19
+74,2026-08-06,Electronics,Wireless Mouse,West,J. Chen,15,29.99,0,449.85,253.53,196.32
+75,2026-01-29,Office Supplies,Whiteboard 90x120,West,M. Garcia,11,59.99,0.05,626.9,412.52,214.38
+76,2026-03-13,Office Supplies,Notebook Set,West,A. Singh,24,12.99,0.1,280.58,175.85,104.73
+77,2025-12-30,Furniture,Ergonomic Desk Chair,North,A. Singh,8,249.99,0,1999.92,1553.12,446.8
+78,2025-06-11,Furniture,Standing Desk,West,P. Novak,4,399.99,0.1,1439.96,1289.4,150.56
+79,2026-04-27,Office Supplies,Marker Pack,South,L. Weber,20,8.99,0,179.8,136.65,43.15
+80,2025-06-22,Office Supplies,Notebook Set,North,M. Garcia,19,12.99,0.05,234.47,162.18,72.29
+81,2025-07-28,Electronics,Noise-Cancelling Headset,South,A. Singh,23,129.99,0,2989.77,2330.76,659.01
+82,2025-05-09,Electronics,USB-C Hub,West,P. Novak,12,49.99,0,599.88,411.88,188.0
+83,2025-12-21,Electronics,Webcam 1080p,West,A. Singh,14,69.99,0,979.86,707.07,272.79
+84,2026-04-21,Furniture,Desk Lamp,South,P. Novak,17,34.99,0,594.83,426.07,168.76
+85,2026-07-11,Accessories,Mouse Pad XL,West,P. Novak,19,19.99,0,379.81,241.95,137.86
+86,2025-09-14,Electronics,USB-C Hub,West,J. Chen,25,49.99,0.05,1187.26,879.65,307.61
+87,2026-01-29,Office Supplies,Notebook Set,West,M. Garcia,6,12.99,0.05,74.04,47.33,26.71
+88,2025-09-27,Office Supplies,Marker Pack,East,L. Weber,1,8.99,0.1,8.09,7.25,0.84
+89,2025-04-03,Furniture,Desk Lamp,West,L. Weber,25,34.99,0,874.75,644.22,230.53
+90,2026-05-23,Accessories,Laptop Stand,North,M. Garcia,8,39.99,0.05,303.92,235.71,68.21
+91,2025-11-15,Office Supplies,Printer Paper Box,East,S. O'Neil,24,24.99,0.1,539.78,383.43,156.35
+92,2026-04-15,Office Supplies,Marker Pack,East,J. Chen,4,8.99,0,35.96,22.84,13.12
+93,2026-07-08,Furniture,Standing Desk,South,P. Novak,16,399.99,0,6399.84,4771.96,1627.88
+94,2026-06-27,Office Supplies,Notebook Set,South,M. Garcia,8,12.99,0,103.92,62.19,41.73
+95,2025-01-20,Furniture,Bookshelf,North,A. Singh,18,119.99,0,2159.82,1594.6,565.22
+96,2025-05-15,Accessories,Laptop Stand,North,L. Weber,10,39.99,0.05,379.91,271.63,108.28
+97,2025-12-20,Furniture,Ergonomic Desk Chair,East,S. O'Neil,4,249.99,0,999.96,658.16,341.8
+98,2025-03-22,Electronics,Mechanical Keyboard,South,L. Weber,10,89.99,0,899.9,736.44,163.46
+99,2025-05-07,Accessories,Webcam Privacy Cover,South,L. Weber,13,5.99,0.05,73.98,61.93,12.05
+100,2025-11-06,Accessories,Cable Organizer,North,L. Weber,24,9.99,0,239.76,193.21,46.55
+101,2025-08-06,Furniture,Bookshelf,North,J. Chen,8,119.99,0,959.92,671.02,288.9
+102,2025-06-15,Electronics,Webcam 1080p,West,P. Novak,20,69.99,0.05,1329.81,879.97,449.84
+103,2025-08-31,Office Supplies,Marker Pack,West,A. Singh,22,8.99,0,197.78,158.12,39.66
+104,2025-07-27,Accessories,Laptop Stand,South,P. Novak,5,39.99,0,199.95,154.6,45.35
+105,2025-03-20,Electronics,Mechanical Keyboard,East,L. Weber,24,89.99,0.1,1943.78,1725.05,218.73
+106,2026-03-31,Electronics,Webcam 1080p,East,P. Novak,13,69.99,0,909.87,623.38,286.49
+107,2026-05-26,Accessories,Laptop Stand,North,S. O'Neil,24,39.99,0,959.76,684.31,275.45
+108,2025-02-01,Electronics,Mechanical Keyboard,North,P. Novak,9,89.99,0.1,728.92,454.25,274.67
+109,2025-07-04,Accessories,Webcam Privacy Cover,West,M. Garcia,6,5.99,0.1,32.35,24.0,8.35
+110,2026-05-24,Electronics,Webcam 1080p,East,S. O'Neil,11,69.99,0,769.89,562.74,207.15
+111,2025-06-19,Office Supplies,Printer Paper Box,West,M. Garcia,22,24.99,0.05,522.29,423.15,99.14
+112,2026-07-23,Electronics,Webcam 1080p,North,M. Garcia,9,69.99,0,629.91,366.17,263.74
+113,2026-02-23,Electronics,Noise-Cancelling Headset,West,S. O'Neil,2,129.99,0,259.98,179.38,80.6
+114,2026-05-31,Accessories,Laptop Stand,South,M. Garcia,18,39.99,0,719.82,576.2,143.62
+115,2026-03-30,Accessories,Laptop Stand,North,P. Novak,20,39.99,0,799.8,593.16,206.64
+116,2025-11-20,Electronics,Noise-Cancelling Headset,West,A. Singh,8,129.99,0,1039.92,701.52,338.4
+117,2025-05-06,Furniture,Desk Lamp,East,L. Weber,23,34.99,0,804.77,532.9,271.87
+118,2026-05-15,Accessories,Monitor Arm,West,L. Weber,5,74.99,0.05,356.2,225.52,130.68
+119,2026-06-10,Furniture,Ergonomic Desk Chair,East,S. O'Neil,11,249.99,0.1,2474.9,1710.81,764.09
+120,2025-01-08,Office Supplies,Marker Pack,West,J. Chen,15,8.99,0.1,121.36,91.8,29.56
+121,2025-12-12,Accessories,Mouse Pad XL,East,J. Chen,23,19.99,0,459.77,323.86,135.91
+122,2025-09-02,Accessories,Laptop Stand,East,P. Novak,16,39.99,0.05,607.85,418.61,189.24
+123,2025-06-10,Accessories,Laptop Stand,South,L. Weber,19,39.99,0,759.81,596.31,163.5
+124,2026-04-01,Electronics,Noise-Cancelling Headset,West,A. Singh,24,129.99,0,3119.76,2061.21,1058.55
+125,2025-06-13,Electronics,Webcam 1080p,East,M. Garcia,20,69.99,0.05,1329.81,1015.49,314.32
+126,2025-12-08,Accessories,Cable Organizer,West,L. Weber,2,9.99,0.1,17.98,11.36,6.62
+127,2025-10-27,Furniture,Ergonomic Desk Chair,West,A. Singh,25,249.99,0,6249.75,4186.04,2063.71
+128,2025-11-08,Electronics,Wireless Mouse,East,A. Singh,10,29.99,0,299.9,195.3,104.6
+129,2025-06-04,Furniture,Filing Cabinet,West,L. Weber,22,89.99,0,1979.78,1179.74,800.04
+130,2025-03-27,Accessories,Webcam Privacy Cover,South,S. O'Neil,19,5.99,0,113.81,69.73,44.08
+131,2025-09-23,Accessories,Cable Organizer,North,S. O'Neil,10,9.99,0.1,89.91,59.21,30.7
+132,2026-04-03,Office Supplies,Stapler Kit,East,P. Novak,14,15.99,0,223.86,150.74,73.12
+133,2025-11-11,Furniture,Desk Lamp,West,A. Singh,8,34.99,0.05,265.92,197.18,68.74
+134,2026-08-17,Office Supplies,Marker Pack,North,P. Novak,13,8.99,0,116.87,64.53,52.34
+135,2025-02-25,Accessories,Cable Organizer,South,L. Weber,12,9.99,0,119.88,86.54,33.34
+136,2025-09-19,Furniture,Ergonomic Desk Chair,North,M. Garcia,15,249.99,0,3749.85,2649.21,1100.64
+137,2025-05-20,Electronics,USB-C Hub,East,P. Novak,14,49.99,0,699.86,422.87,276.99
+138,2026-07-12,Office Supplies,Stapler Kit,East,J. Chen,9,15.99,0.05,136.71,116.74,19.97
+139,2025-11-04,Office Supplies,Notebook Set,West,A. Singh,5,12.99,0,64.95,50.81,14.14
+140,2026-02-16,Office Supplies,Notebook Set,West,A. Singh,9,12.99,0.1,105.22,68.2,37.02
+141,2026-01-18,Office Supplies,Stapler Kit,West,P. Novak,12,15.99,0,191.88,140.5,51.38
+142,2026-05-03,Electronics,Noise-Cancelling Headset,East,L. Weber,8,129.99,0,1039.92,750.36,289.56
+143,2026-04-26,Office Supplies,Printer Paper Box,North,J. Chen,2,24.99,0,49.98,31.6,18.38
+144,2026-05-25,Electronics,Wireless Mouse,South,L. Weber,5,29.99,0.05,142.45,100.84,41.61
+145,2026-07-13,Accessories,Webcam Privacy Cover,South,S. O'Neil,21,5.99,0,125.79,97.5,28.29
+146,2026-02-27,Office Supplies,Notebook Set,East,J. Chen,15,12.99,0.05,185.11,157.18,27.93
+147,2026-01-12,Electronics,USB-C Hub,East,A. Singh,13,49.99,0,649.87,390.73,259.14
+148,2025-05-11,Accessories,Laptop Stand,South,P. Novak,21,39.99,0.1,755.81,682.07,73.74
+149,2025-02-26,Office Supplies,Whiteboard 90x120,South,L. Weber,7,59.99,0,419.93,325.05,94.88
+150,2026-07-27,Furniture,Filing Cabinet,South,J. Chen,11,89.99,0,989.89,755.22,234.67
+151,2025-01-08,Office Supplies,Whiteboard 90x120,South,L. Weber,9,59.99,0,539.91,312.98,226.93
+152,2025-02-01,Furniture,Ergonomic Desk Chair,East,J. Chen,19,249.99,0,4749.81,2632.63,2117.18
+153,2025-10-04,Electronics,Mechanical Keyboard,West,L. Weber,4,89.99,0,359.96,244.26,115.7
+154,2026-01-11,Electronics,Webcam 1080p,South,L. Weber,2,69.99,0.1,125.98,88.39,37.59
+155,2025-02-06,Electronics,Webcam 1080p,West,S. O'Neil,22,69.99,0,1539.78,1050.7,489.08
+156,2026-04-05,Electronics,Wireless Mouse,East,L. Weber,5,29.99,0,149.95,87.58,62.37
+157,2026-08-28,Office Supplies,Printer Paper Box,East,S. O'Neil,17,24.99,0.1,382.35,283.0,99.35
+158,2025-05-03,Furniture,Desk Lamp,West,J. Chen,14,34.99,0,489.86,378.86,111.0
+159,2026-02-18,Accessories,Laptop Stand,East,S. O'Neil,11,39.99,0,439.89,286.4,153.49
+160,2025-06-11,Accessories,Laptop Stand,North,A. Singh,3,39.99,0.05,113.97,69.11,44.86
+161,2026-01-22,Furniture,Filing Cabinet,North,L. Weber,18,89.99,0.1,1457.84,1035.07,422.77
+162,2025-05-11,Accessories,Cable Organizer,West,P. Novak,2,9.99,0,19.98,14.23,5.75
+163,2026-01-01,Electronics,Noise-Cancelling Headset,South,J. Chen,22,129.99,0.05,2716.79,1746.03,970.76
+164,2025-04-26,Office Supplies,Stapler Kit,East,A. Singh,25,15.99,0,399.75,281.83,117.92
+165,2026-03-21,Electronics,Noise-Cancelling Headset,East,A. Singh,6,129.99,0,779.94,576.94,203.0
+166,2025-11-18,Office Supplies,Marker Pack,North,J. Chen,5,8.99,0.1,40.46,32.7,7.76
+167,2025-03-18,Furniture,Ergonomic Desk Chair,North,P. Novak,17,249.99,0,4249.83,2769.07,1480.76
+168,2026-04-15,Office Supplies,Whiteboard 90x120,East,M. Garcia,24,59.99,0,1439.76,1093.85,345.91
+169,2026-08-10,Electronics,Wireless Mouse,South,J. Chen,25,29.99,0.1,674.77,422.44,252.33
+170,2025-03-30,Office Supplies,Printer Paper Box,West,S. O'Neil,20,24.99,0.05,474.81,330.78,144.03
+171,2025-08-14,Electronics,USB-C Hub,West,A. Singh,10,49.99,0.1,449.91,340.63,109.28
+172,2025-11-17,Electronics,Mechanical Keyboard,West,L. Weber,2,89.99,0,179.98,108.92,71.06
+173,2025-08-10,Furniture,Bookshelf,East,M. Garcia,4,119.99,0,479.96,328.43,151.53
+174,2026-03-22,Furniture,Standing Desk,West,L. Weber,23,399.99,0,9199.77,6302.49,2897.28
+175,2026-01-03,Electronics,Webcam 1080p,North,S. O'Neil,1,69.99,0.05,66.49,55.9,10.59
+176,2025-11-22,Accessories,Webcam Privacy Cover,West,P. Novak,21,5.99,0.05,119.5,79.02,40.48
+177,2026-02-24,Electronics,USB-C Hub,South,L. Weber,15,49.99,0,749.85,430.26,319.59
+178,2025-04-24,Furniture,Desk Lamp,West,L. Weber,3,34.99,0.05,99.72,82.41,17.31
+179,2025-12-19,Furniture,Bookshelf,South,A. Singh,17,119.99,0,2039.83,1414.14,625.69
+180,2025-07-23,Office Supplies,Marker Pack,South,J. Chen,4,8.99,0,35.96,22.26,13.7
