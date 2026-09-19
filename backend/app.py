@@ -37,8 +37,15 @@ def create_app():
     app.register_blueprint(dataset_bp, url_prefix="/api")
     app.register_blueprint(analysis_bp, url_prefix="/api")
 
+    @app.get("/api/health")
+    def health():
+        return jsonify({
+            "status": "ok",
+            "gemini_configured": bool(os.getenv("GEMINI_API_KEY")),
+        })
+
     dist = _find_frontend_dist()
-    if dist:
+    if dist and not os.getenv("VERCEL"):
         @app.route("/", defaults={"path": ""})
         @app.route("/<path:path>")
         def serve_frontend(path):
@@ -47,13 +54,6 @@ def create_app():
             if path and os.path.isfile(os.path.join(dist, path)):
                 return send_from_directory(dist, path)
             return send_from_directory(dist, "index.html")
-
-    @app.get("/api/health")
-    def health():
-        return jsonify({
-            "status": "ok",
-            "gemini_configured": bool(os.getenv("GEMINI_API_KEY")),
-        })
 
     @app.errorhandler(413)
     def too_large(_error):

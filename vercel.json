@@ -7,11 +7,15 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/index.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "functions": {
     "api/index.py": {
-      "includeFiles": "{backend/**,frontend/dist/**}",
+      "includeFiles": "backend/**",
       "maxDuration": 60
     }
   }
