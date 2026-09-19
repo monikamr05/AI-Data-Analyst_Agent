@@ -13,25 +13,15 @@ from any route.
 
 import os
 import sys
-import traceback
 
+# Ensure backend directory is in Python path
 BACKEND_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "backend")
 )
 if BACKEND_DIR not in sys.path:
     sys.path.insert(0, BACKEND_DIR)
 
-try:
-    from app import create_app  # noqa: E402
+from app import create_app
 
-    app = create_app()
-except Exception:  # pragma: no cover - diagnostic fallback on Vercel
-    from flask import Flask, jsonify
+app = create_app()
 
-    _startup_error = traceback.format_exc()
-    app = Flask(__name__)
-
-    @app.route("/", defaults={"path": ""})
-    @app.route("/<path:path>")
-    def startup_failure(path):
-        return jsonify({"error": "startup failed", "traceback": _startup_error}), 500
