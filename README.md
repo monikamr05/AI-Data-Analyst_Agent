@@ -1,5 +1,12 @@
 # AI Data Analyst Agent
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-onrender.com-success?style=for-the-badge&logo=render)](https://ai-data-analyst-agent-k5sl.onrender.com/)
+[![React](https://img.shields.io/badge/Frontend-React_18_%2B_Vite-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
+[![Python](https://img.shields.io/badge/Backend-Python_Flask-3776ab?style=for-the-badge&logo=python)](https://flask.palletsprojects.com/)
+[![Gemini](https://img.shields.io/badge/AI-Google_Gemini-4285f4?style=for-the-badge&logo=google)](https://aistudio.google.com/)
+
+> **🌐 Live Application**: [https://ai-data-analyst-agent-k5sl.onrender.com/](https://ai-data-analyst-agent-k5sl.onrender.com/)
+
 A full-stack, AI-powered web application that lets you upload CSV datasets, ask questions in plain English, and receive instant answers accompanied by detailed explanations, structured data tables, interactive charts, and transparent pandas code.
 
 The AI (**Google Gemini**) writes real pandas code to answer each query; the backend statically validates the generated code in a secure AST sandbox and executes it against your data in isolated memory.
