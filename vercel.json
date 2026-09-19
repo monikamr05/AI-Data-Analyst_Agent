@@ -5,7 +5,7 @@
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/index.py": {
-      "includeFiles": ["backend/**/*.py", "frontend/dist/**"],
+      "includeFiles": "{backend/**/*.py,frontend/dist/**}",
       "maxDuration": 60
     }
   }
