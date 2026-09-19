@@ -3,7 +3,7 @@
 import os
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
 
 from routes.analysis_routes import analysis_bp
@@ -14,6 +14,20 @@ load_dotenv()
 MAX_UPLOAD_MB = 4 if os.getenv("VERCEL") else 50
 
 
+def _find_frontend_dist():
+    """Locate the built frontend bundle, if present."""
+    candidates = [
+        os.path.join(os.getcwd(), "frontend", "dist"),
+        os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")
+        ),
+    ]
+    for path in candidates:
+        if os.path.isfile(os.path.join(path, "index.html")):
+            return path
+    return None
+
+
 def create_app():
     app = Flask(__name__)
     CORS(app)
@@ -22,6 +36,17 @@ def create_app():
 
     app.register_blueprint(dataset_bp, url_prefix="/api")
     app.register_blueprint(analysis_bp, url_prefix="/api")
+
+    dist = _find_frontend_dist()
+    if dist:
+        @app.route("/", defaults={"path": ""})
+        @app.route("/<path:path>")
+        def serve_frontend(path):
+            if path.startswith("api/"):
+                return jsonify({"error": "Not found."}), 404
+            if path and os.path.isfile(os.path.join(dist, path)):
+                return send_from_directory(dist, path)
+            return send_from_directory(dist, "index.html")
 
     @app.get("/api/health")
     def health():
