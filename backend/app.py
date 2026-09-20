@@ -1,4 +1,4 @@
-a"""AI Data Analyst Agent - Flask application entry point."""
+"""AI Data Analyst Agent - Flask application entry point."""
 
 import os
 
