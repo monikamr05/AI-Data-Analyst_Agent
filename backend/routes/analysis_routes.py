@@ -43,12 +43,14 @@ def ask():
         return jsonify({"error": f"Unexpected error while analyzing: {exc}"}), 500
 
     chart = plan.get("chart")
-    if result.get("type") == "table":
-        columns = set(result["columns"])
-        if not chart["x"] or chart["x"] not in columns or (chart["y"] and chart["y"] not in columns):
+    if chart and result.get("type") == "table":
+        columns = set(result.get("columns", []))
+        chart_x = chart.get("x")
+        chart_y = chart.get("y")
+        if not chart_x or chart_x not in columns or (chart_y and chart_y not in columns):
             chart = None  # chart references columns that are not in the result
     else:
-        chart = None  # charts need a table of values
+        chart = None  # charts need a table of values and valid chart config
 
     return jsonify({
         "answer": plan["explanation"],
